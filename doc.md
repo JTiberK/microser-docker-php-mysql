@@ -157,3 +157,56 @@ http://<IP_PUBLICA_DE_EC2>:8080
 
 En mi caso >>> http://44.201.122.34:8080/
 ```
+
+## 4. 🔹 CONTINUACIÓN CON MASTER:
+
+- #Creamos carpeta “proyecto” y dentro de este creamos 2 directiorios “html” y “php” y Navega al directorio html:
+
+```bash
+mkdir -p ~/proyecto/php
+# mkdir -p ~/proyecto/html se creó anteriormente
+```
+
+- #Navega al directorio html:
+```bash
+cd proyecto/html
+```
+
+-  #Dentro de este directorio Ejectuar los siguientes comandos para instalar php
+
+```bash
+sudo yum install php php-cli php-json php-mbstring -y
+# A funcionado
+```
+
+```bash
+sudo php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+# A funcionado
+```
+
+```bash
+sudo php composer-setup.php
+# A funcionado
+```
+
+```bash
+sudo php -r "unlink('composer-setup.php');"
+# A funcionado >>> composer-setup.php BORRADO
+```
+
+```bash
+sudo php composer.phar require aws/aws-sdk-php
+# A funcionado
+```
+
+## 5. 🔹 Crear un topico SNS
+
+-  #Crear un topico SNS y subscribir tu email al topico, confirmar la subscripcion haciendo click al email que has recibido
+
+## 5. 🔹 Configuración
+
+-  #Crear fichero docker-compose.yml en la raiz del proyecto
+
+```bash
+nano ~/proyecto/docker-compose.yml
+```

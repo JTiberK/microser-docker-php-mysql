@@ -7,11 +7,10 @@ ssh -i "mi-clave.pem" ec2-user@IP_PUBLICA
 <br>
 
 > [!TIP]
-> ESTA ES EL PROMPT CORRECTO LANZADO EN POWERSHELL VS CODE
+> ESTE ES EL PROMPT CORRECTO LANZADO EN POWERSHELL VS CODE
 
 ```powershell
 ssh -i "labsuser.pem" ec2-user@44.201.122.34
-# 
 ```
 <br>
 
@@ -70,7 +69,7 @@ docker-compose --version
 # ERROR #~~~~~~~~
 ```
 
-### Respuesta ChatGPT
+### Respuesta del MASTER
 
 - #Sí, ese error es común en sistemas como Amazon Linux 2 o algunas distribuciones minimalistas. El mensaje:
 significa que docker-compose fue instalado como binario precompilado y depende de una librería del sistema `(libcrypt.so.1)` que no está instalada.
@@ -100,7 +99,7 @@ sudo yum install -y python3-pip
 # A funcionado []$ pip3 --version
 ```
 
-## 4. 🔹 OPCIÓN A POR CHATGPT: Usar Apache dentro de un contenedor Docker (recomendado si ya usas Docker)
+## 4. 🔹 OPCIÓN POR CHATGPT: Usar Apache dentro de un contenedor Docker (recomendado si ya usas Docker)
 
 - #✅ Paso 1: Crea la estructura de tu proyecto
 
